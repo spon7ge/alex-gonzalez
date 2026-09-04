@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Alex Gonzalez- Portfolio</title>
-        <link rel="icon" type="image/png", sizes="32x32" href="basketball.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="basketball.png">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -15,6 +15,7 @@
         <h1>Alejandro "Alex" Gonzalez</h1>
         <nav>
             <ul>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -26,7 +27,7 @@
             <br>
             <span class="highlight">Alejandro Gonzalez</span>
             </h1>
-            <p>A data science student at <strong>Saint Mary's College of California</strong> also minoring in computer science. I'm passionate about sports and fascinated by how math and data science unlock insights about the game—and really, about anything. I love discovering patterns and trends through data analysis, whether it's analyzing player performance or exploring new frontiers in technology and product development.</p>
+            <p>Software engineer specializing in backend services and data-intensive systems. I ship full-stack apps end-to-end with <strong>Python, FastAPI, SQL, and React</strong> — including the unit and integration tests behind them. I'm a recent graduate with a degree in Data Science and a minor in Computer Science from <strong>Saint Mary's College of California</strong>.</p>
         </div>
         <div class="image_container">
             <img src="alex.jpg" alt="author">
@@ -34,55 +35,47 @@
         </div>
     </div>
 
-    <div class="work_container">
+    <div id="projects" class="work_container">
         <h1>Projects.</h1>
         <div class="projects_container">
             <div class="project">
                 <div class="image">
-                    <a>
-                        <img src="1630162.avif" alt="Anthony Edwards Analysis">
+                    <a href="https://github.com/spon7ge/statvista">
+                        <img src="statvista-home.png" alt="Live Sports Analytics Platform">
                     </a>
                 </div>
                 <div class="title">
-                    <strong>Anthony Edwards Player Analysis (2020-2025)</strong>
-                    <br>
-                    <a class="git_color" href="https://github.com/spon7ge/AntMan-Analysis">(Github)</a>
+                    <strong>Live Sports Analytics Platform</strong>
+                    <p class="tech">Python, FastAPI, React, TypeScript, Tailwind, Supabase, Docker</p>
+                    <p class="blurb">React/FastAPI app that unifies live scores, odds, and prop context across 8+ feeds so fans aren't jumping between sites.</p>
+                    <a class="git_color" href="https://github.com/spon7ge/statvista">(Github)</a>
                 </div>
             </div>
             <div class="project">
                 <div class="image">
-                    <a>
-                        <img src="newSeason.jpg" alt="player analysis">
+                    <a href="https://github.com/spon7ge/statvista/tree/master/models">
+                        <img src="nbaProps.jpeg" alt="Player Prop Prediction Models">
                     </a>
                 </div>
                 <div class="title">
-                    <strong>Heatcheck</strong>
-                    <br>
-                    <a class="git_color" href="https://heatcheckv2.streamlit.app/?">(Website)</a>
+                    <strong>Player Prop Prediction Models</strong>
+                    <p class="tech">Python, XGBoost, Hypothesis Testing, Supervised Learning</p>
+                    <p class="blurb">XGBoost quantile models with leak-proof validation. Cut prediction error 27% vs. baseline on a 20K+ game holdout.</p>
+                    <a class="git_color" href="https://github.com/spon7ge/statvista/tree/master/models">(Github)</a>
                 </div>
             </div>
             <div class="project">
                 <div class="image">
-                    <a>
-                        <img src="HV_ICON.png" alt="Project 3">
+                    <a href="https://github.com/spon7ge/mlb-research-bot" class="project-visual mlb">
+                        <span>MLB QA</span>
+                        <small>cited stats from Postgres</small>
                     </a>
                 </div>
                 <div class="title">
-                    <strong>NBA Player Prop Prediction Dashboard</strong>
-                    <br>
-                    <a class="git_color" href="https://spon7ge.github.io/HoopVista/">(Website)</a>
-                </div>
-            </div>
-            <div class="project">
-                <div class="image">
-                    <a>
-                        <img src="budget.jpeg" alt="Project 4">
-                    </a>
-                </div>
-                <div class="title">
-                    <strong>Track Your Money (Budgeting App)</strong>
-                    <br>
-                    <a class="git_color" href="https://track-your-money-d4891.web.app/login">(Website)</a>
+                    <strong>MLB Research Bot</strong>
+                    <p class="tech">Next.js, FastAPI, PostgreSQL/pgvector, Redis, Docker, OpenAI</p>
+                    <p class="blurb">MLB Q&amp;A over 130K+ player records through 11 allowlisted SQL tools so every statistic is cited from Postgres, not generated.</p>
+                    <a class="git_color" href="https://github.com/spon7ge/mlb-research-bot">(Github)</a>
                 </div>
             </div>
         </div>
@@ -95,7 +88,7 @@
             <br>
             Simply shoot me an email or message me on LinkedIn.
         </p>
-        <a class="email_link" href="mailto:alg21@stmarys-ca.edu">alg21@stmarys-ca.edu</a>
+        <a class="email_link" href="mailto:alexgonzo33@gmail.com">alexgonzo33@gmail.com</a>
     </div>
     <div class="social_links">
         <ul>
@@ -106,7 +99,7 @@
                 <a id="end" href="https://www.linkedin.com/in/alex-gonzalez-data/">LinkedIn</a>
             </li>
             <li>
-                <a id="end" href="mailto:alg21@stmarys-ca.edu">Email</a>
+                <a id="end" href="mailto:alexgonzo33@gmail.com">Email</a>
             </li>
             <li>
                 <a id="end" href="Alejandro_Gonzalez_Resume.pdf">Resume</a>
