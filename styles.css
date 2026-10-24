@@ -160,16 +160,17 @@ nav ul li a:hover {
 
 .skill_group {
     display: grid;
-    grid-template-columns: 140px 1fr;
-    gap: 16px;
-    align-items: start;
+    grid-template-columns: 5rem 1fr;
+    column-gap: 16px;
+    row-gap: 8px;
+    align-items: center;
 }
 
 .skill_group h2 {
     font-size: 14px;
     font-weight: 600;
     color: var(--accent);
-    padding-top: 6px;
+    padding-top: 0;
 }
 
 .skill_tags {
@@ -411,11 +412,11 @@ nav ul li a:hover {
 
     .skill_group h2 {
         padding-top: 0;
-        text-align: center;
+        text-align: left;
     }
 
     .skill_tags {
-        justify-content: center;
+        justify-content: flex-start;
     }
 
     .projects_container {
