@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Alex Gonzalez- Portfolio</title>
-        <link rel="icon" type="image/png", sizes="32x32" href="basketball.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="basketball.png">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -15,6 +15,8 @@
         <h1>Alejandro "Alex" Gonzalez</h1>
         <nav>
             <ul>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -34,79 +36,118 @@
         </div>
     </div>
 
-    <div class="work_container">
-        <h1>Projects.</h1>
+    <div id="skills" class="skills_container">
+        <h1>skills.</h1>
+        <div class="skills_list">
+            <div class="skill_group">
+                <h2>Analysis</h2>
+                <div class="skill_tags">
+                    <span>Python</span>
+                    <span>SQL</span>
+                    <span>PostgreSQL</span>
+                    <span>Hypothesis Testing</span>
+                </div>
+            </div>
+            <div class="skill_group">
+                <h2>Modeling</h2>
+                <div class="skill_tags">
+                    <span>XGBoost</span>
+                    <span>Supervised Learning</span>
+                    <span>Model Validation</span>
+                    <span>PyTorch</span>
+                </div>
+            </div>
+            <div class="skill_group">
+                <h2>Tools</h2>
+                <div class="skill_tags">
+                    <span>Git</span>
+                    <span>Airflow</span>
+                    <span>Docker</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="projects" class="work_container">
+        <h1>projects.</h1>
         <div class="projects_container">
             <div class="project">
                 <div class="image">
-                    <a>
-                        <img src="1630162.avif" alt="Anthony Edwards Analysis">
+                    <a href="https://github.com/spon7ge/statvista">
+                        <img src="statvista-home.png" alt="Live Sports Analytics Platform">
                     </a>
                 </div>
                 <div class="title">
-                    <strong>Anthony Edwards Player Analysis (2020-2025)</strong>
-                    <br>
-                    <a class="git_color" href="https://github.com/spon7ge/AntMan-Analysis">(Github)</a>
+                    <strong>Live Sports Analytics Platform</strong>
+                    <p class="tech">Python, FastAPI, React, TypeScript, Tailwind, Supabase, Docker</p>
+                    <p class="blurb">React/FastAPI app that unifies live scores, odds, and prop context across 8+ feeds so fans aren't jumping between sites.</p>
+                    <a class="git_color" href="https://github.com/spon7ge/statvista">(Github)</a>
                 </div>
             </div>
             <div class="project">
                 <div class="image">
-                    <a>
-                        <img src="newSeason.jpg" alt="player analysis">
+                    <a href="https://github.com/spon7ge/statvista/tree/master/models">
+                        <img src="nbaProps.jpeg" alt="Player Prop Prediction Models">
                     </a>
                 </div>
                 <div class="title">
-                    <strong>Heatcheck</strong>
-                    <br>
-                    <a class="git_color" href="https://heatcheckv2.streamlit.app/?">(Website)</a>
+                    <strong>NBA Player Prop Modeling & Market Analysis </strong>
+                    <p class="tech">Python, XGBoost, Hypothesis Testing, Supervised Learning</p>
+                    <p class="blurb">XGBoost quantile models with leak-proof validation. Cut prediction error 27% vs. baseline on a 20K+ game holdout.</p>
+                    <a class="git_color" href="https://github.com/spon7ge/statvista/tree/master/models">(Github)</a>
                 </div>
             </div>
             <div class="project">
                 <div class="image">
-                    <a>
-                        <img src="HV_ICON.png" alt="Project 3">
+                    <a href="https://github.com/spon7ge/mlb-research-bot" class="project-visual mlb">
+                        <span>MLB QA</span>
+                        <small>cited stats from Postgres</small>
                     </a>
                 </div>
                 <div class="title">
-                    <strong>NBA Player Prop Modeling & Market Analysis</strong>
-                    <br>
-                    <a class="git_color" href="">(Github - Private)</a>
+                    <strong>MLB Research Bot</strong>
+                    <p class="tech">Next.js, FastAPI, PostgreSQL/pgvector, Redis, Docker, OpenAI</p>
+                    <p class="blurb">MLB Q&amp;A over 130K+ player records through 11 allowlisted SQL tools so every statistic is cited from Postgres, not generated.</p>
+                    <a class="git_color" href="https://github.com/spon7ge/mlb-research-bot">(Github)</a>
                 </div>
             </div>
             <div class="project">
                 <div class="image">
-                    <a>
-                        <img src="budget.jpeg" alt="Project 4">
+                    <a href="https://track-your-money-d4891.web.app/login">
+                        <img src="budget.jpeg" alt="Track Your Money">
                     </a>
                 </div>
                 <div class="title">
                     <strong>Track Your Money (Budgeting App)</strong>
-                    <br>
+                    <p class="tech">React, JavaScript, Firebase, Chart.js</p>
+                    <p class="blurb"></p>
                     <a class="git_color" href="https://track-your-money-d4891.web.app/login">(Website)</a>
                 </div>
             </div>
             <div class="project">
                 <div class="image">
-                    <a>
-                        <img src="nba-logo.webp" alt="Project 5">
+                    <a href="https://spon7ge.github.io/nba-shot-selection/eda_findings.html">
+                        <img src="nba-logo.webp" alt="NBA Shot Selection and Scoring Efficiency Analysis">
                     </a>
                 </div>
                 <div class="title">
                     <strong>NBA Shot Selection and Scoring Efficiency Analysis</strong>
-                    <br>
+                    <p class="tech">Python, Pandas, NumPy, Matplotlib, Seaborn</p>
+                    <p class="blurb"></p>
                     <a class="git_color" href="https://spon7ge.github.io/nba-shot-selection/eda_findings.html">(Report)</a>
                 </div>
             </div>
             <div class="project">
                 <div class="image">
-                    <a>
-                        <img src="pngtree-advanced-data-analytics-techniques-are-transforming-modern-business-intelligence-activities-image_17429286.webp" alt="Project 5">
+                    <a href="https://github.com/spon7ge/AntMan-Analysis">
+                        <img src="1630162.avif" alt="Anthony Edwards Analysis">
                     </a>
                 </div>
                 <div class="title">
-                    <strong>statvista - NBA Analytics Platform</strong>
-                    <br>
-                    <a class="git_color" href="https://github.com/spon7ge/statvista">(Github - In Progress)</a>
+                    <strong>Anthony Edwards Player Analysis (2020-2025)</strong>
+                    <p class="tech">Python, Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn</p>
+                    <p class="blurb"></p>
+                    <a class="git_color" href="https://github.com/spon7ge/AntMan-Analysis">(Github)</a>
                 </div>
             </div>
         </div>
@@ -119,7 +160,7 @@
             <br>
             Simply shoot me an email or message me on LinkedIn.
         </p>
-        <a class="email_link" href="mailto:alg21@stmarys-ca.edu">alg21@stmarys-ca.edu</a>
+        <a class="email_link" href="mailto:alexgonzo33@gmail.com">alexgonzo33@gmail.com</a>
     </div>
     <div class="social_links">
         <ul>
@@ -130,7 +171,7 @@
                 <a id="end" href="https://www.linkedin.com/in/alex-gonzalez-data/">LinkedIn</a>
             </li>
             <li>
-                <a id="end" href="mailto:alg21@stmarys-ca.edu">Email</a>
+                <a id="end" href="mailto:alexgonzo33@gmail.com">Email</a>
             </li>
             <li>
                 <a id="end" href="Alejandro_Gonzalez_Resume.pdf">Resume</a>
