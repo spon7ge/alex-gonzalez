@@ -31,7 +31,7 @@
             <p>Recent graduate of <strong>Saint Mary's College of California</strong> with a background in data science and a minor in computer science. I'm passionate about using data, machine learning, and statistical modeling to uncover patterns, solve problems, and turn complex information into actionable insights. As a sports enthusiast, I'm especially interested in sports analytics and exploring how data can help us better understand player performance, evaluate strategies, and make smarter decisions. I'm always curious to learn new technologies, build useful products, and find creative ways to apply data science to real-world problems.</p>
         </div>
         <div class="image_container">
-            <img src="alex.jpg" alt="author">
+            <img src="alex.JPEG" alt="author">
             <div class="bg"></div>
         </div>
     </div>
@@ -83,7 +83,6 @@
                 <div class="title">
                     <strong>Live Sports Analytics Platform</strong>
                     <p class="tech">Python, FastAPI, React, TypeScript, Tailwind, Supabase, Docker</p>
-                    <p class="blurb">React/FastAPI app that unifies live scores, odds, and prop context across 8+ feeds so fans aren't jumping between sites.</p>
                     <a class="git_color" href="https://github.com/spon7ge/statvista">(Github - In Progress)</a>
                 </div>
             </div>
@@ -96,7 +95,6 @@
                 <div class="title">
                     <strong>NBA Player Prop Modeling & Market Analysis </strong>
                     <p class="tech">Python, XGBoost, Hypothesis Testing, Supervised Learning</p>
-                    <p class="blurb">XGBoost quantile models with leak-proof validation. Cut prediction error 27% vs. baseline on a 20K+ game holdout.</p>
                     <a class="git_color" href="https://github.com/spon7ge/statvista/tree/master/models">(Github - Private)</a>
                 </div>
             </div>
@@ -110,7 +108,6 @@
                 <div class="title">
                     <strong>MLB Research Bot</strong>
                     <p class="tech">Next.js, FastAPI, PostgreSQL/pgvector, Redis, Docker, OpenAI</p>
-                    <p class="blurb">MLB Q&amp;A over 130K+ player records through 11 allowlisted SQL tools so every statistic is cited from Postgres, not generated.</p>
                     <a class="git_color" href="https://github.com/spon7ge/mlb-research-bot">(Github)</a>
                 </div>
             </div>
@@ -204,4 +201,71 @@
             });
         </script>
     </div>
+    <script>
+        (function () {
+            var home = document.querySelector(".home_container");
+            var text = document.querySelector(".text_container");
+            var box = document.querySelector(".image_container");
+            var img = box ? box.querySelector("img") : null;
+            if (!home || !text || !box || !img) return;
+
+            var stacked = window.matchMedia("(max-width: 768px)");
+
+            function layout() {
+                if (stacked.matches) {
+                    box.style.width = "";
+                    box.style.height = "";
+                    return;
+                }
+
+                var ratio = img.naturalWidth && img.naturalHeight
+                    ? img.naturalWidth / img.naturalHeight
+                    : 3 / 4;
+                var styles = window.getComputedStyle(home);
+                var gap = parseFloat(styles.columnGap || styles.gap) || 0;
+                var homeWidth = home.getBoundingClientRect().width;
+                var minWidth = 160;
+                var maxWidth = Math.max(minWidth, homeWidth - gap - 200);
+                var best = null;
+
+                function closer(candidate) {
+                    if (!best) return true;
+                    var candidateFit = candidate.diff <= 1;
+                    var bestFit = best.diff <= 1;
+                    if (candidateFit !== bestFit) return candidateFit;
+                    if (candidateFit) return candidate.w < best.w;
+                    return candidate.diff < best.diff;
+                }
+
+                function measure(width) {
+                    box.style.width = width + "px";
+                    box.style.height = (width / ratio) + "px";
+                    var textHeight = text.getBoundingClientRect().height;
+                    var imageHeight = box.getBoundingClientRect().height;
+                    return { w: width, diff: Math.abs(imageHeight - textHeight) };
+                }
+
+                var step;
+                for (step = minWidth; step <= maxWidth; step += 8) {
+                    var sample = measure(step);
+                    if (closer(sample)) best = sample;
+                }
+                var start = Math.max(minWidth, best.w - 8);
+                var end = Math.min(maxWidth, best.w + 8);
+                for (step = start; step <= end; step += 1) {
+                    var refined = measure(step);
+                    if (closer(refined)) best = refined;
+                }
+
+                box.style.width = best.w + "px";
+                box.style.height = (best.w / ratio) + "px";
+            }
+
+            if (img.complete) layout();
+            else img.addEventListener("load", layout);
+            window.addEventListener("resize", layout);
+            if (stacked.addEventListener) stacked.addEventListener("change", layout);
+            if (document.fonts && document.fonts.ready) document.fonts.ready.then(layout);
+        })();
+    </script>
 </body></html>
